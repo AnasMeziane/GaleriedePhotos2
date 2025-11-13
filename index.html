@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Galerie interactive accessible</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="initGallery()">
+
+  <header>
+    <h1>Galerie photo interactive</h1>
+    <p id="instructions">Survolez une image ou utilisez Tab + Entrée pour afficher la grande image.</p>
+  </header>
+
+  <main>
+    <div id="preview" aria-live="polite" role="img" aria-label="Zone de prévisualisation">
+      Hover over an image below to display here.
+    </div>
+
+  
+    <section id="thumbnails" aria-label="Vignettes de la galerie">
+      <figure class="thumb">
+        <img src="https://picsum.photos/id/237/600/400" alt="Chien assis regardant la caméra" 
+             onmouseover="upDate(this)" onmouseleave="unDo()" onfocus="upDate(this)" onblur="unDo()" tabindex="0">
+        <figcaption>Chien</figcaption>
+      </figure>
+
+      <figure class="thumb">
+        <img src="https://picsum.photos/id/1025/600/400" alt="Perroquet coloré sur une branche" 
+             onmouseover="upDate(this)" onmouseleave="unDo()" onfocus="upDate(this)" onblur="unDo()" tabindex="0">
+        <figcaption>Perroquet</figcaption>
+      </figure>
+
+      <figure class="thumb">
+        <img src="https://picsum.photos/id/1084/600/400" alt="Chaîne de montagnes avec ciel bleu" 
+             onmouseover="upDate(this)" onmouseleave="unDo()" onfocus="upDate(this)" onblur="unDo()" tabindex="0">
+        <figcaption>Montagnes</figcaption>
+      </figure>
+
+      <figure class="thumb">
+        <img src="https://picsum.photos/id/1015/600/400" alt="Cheval courant dans le champ" 
+             onmouseover="upDate(this)" onmouseleave="unDo()" onfocus="upDate(this)" onblur="unDo()" tabindex="0">
+        <figcaption>Cheval</figcaption>
+      </figure>
+
+      <figure class="thumb">
+        <img src="https://picsum.photos/id/1069/600/400" alt="Plage au coucher du soleil" 
+             onmouseover="upDate(this)" onmouseleave="unDo()" onfocus="upDate(this)" onblur="unDo()" tabindex="0">
+        <figcaption>Plage</figcaption>
+      </figure>
+
+      <figure class="thumb">
+        <img src="https://picsum.photos/id/1043/600/400" alt="Ville nocturne illuminée" 
+             onmouseover="upDate(this)" onmouseleave="unDo()" onfocus="upDate(this)" onblur="unDo()" tabindex="0">
+        <figcaption>Ville</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <script src="gallery.js"></script>
+</body>
+</html>
